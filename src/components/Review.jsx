@@ -82,7 +82,7 @@ const Review = () => {
                   The chicken was cooked perfectly, juicy & soft. I would
                   definitely recommend it.
                 </p>
-                <div className="flex items-center justify-between mt-auto lg:mt-[200px]">
+                <div className="flex items-center justify-between mt-auto lg:mt-[85px]">
                   <div>
                     <h4 className="text-[#0A1425] font-bold text-lg md:text-xl">
                       Khalid Al Dawsry
