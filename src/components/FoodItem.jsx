@@ -85,7 +85,7 @@ const FoodItem = () => {
           ].map((item, index) => (
             <div key={index} className="text-center bg-white w-full sm:w-[280px] h-[300px] mx-2">
               <div className="py-8">
-                <img src={`../../public/image/${item.imgSrc}`} className="mx-auto" alt={item.title} />
+                <img src={`/image/${item.imgSrc}`} className="mx-auto" alt={item.title} />
                 <div className="h-1 w-14 my-6 mx-auto bg-[#BD1F17]"></div>
                 <p className="font-bold uppercase text-lg sm:text-2xl text-[#0A1425]">{item.title}</p>
                 <span className="text-sm sm:text-[16px] text-[#0A1425]">{item.desc}</span>
@@ -114,7 +114,7 @@ const FoodItem = () => {
       </div>
       <img
         className="absolute left-0 hidden w-24 lg:block bottom-28 lg:w-auto"
-        src="../../public/image/top-view.png"
+        src="/image/top-view.png"
         alt=""
       />
     </div>
