@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.overlay {
+    position: relative;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url('../public/image/footer.jpeg');
+  }
+  
+  .overlay::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.699); /* Adjust 0.5 for desired darkness */
+    z-index: 1;
+  }
+  
+  .overlay-content {
+    position: relative;
+    z-index: 2;
+    color: white; /* Example text color */
+  }
