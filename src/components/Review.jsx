@@ -38,7 +38,7 @@ const Review = () => {
   return (
     <div className="relative max-w-[1920px] py-20 bg-gray-100">
       <img
-        src="../../public/image/221.png"
+        src="/image/221.png"
         className="absolute hidden md:block w-[80px] h-[160px] sm:w-[100px] sm:h-[203px] left-0 top-28"
         alt="Decorative"
       />
@@ -72,7 +72,7 @@ const Review = () => {
           <div className="flex flex-col-reverse items-center justify-between mt-8 md:flex-row">
             <div className="w-full relative md:w-2/5 bg-[#FEBF00] p-6 sm:p-8 shadow-lg">
               <img
-                src="../../public/image/Group5.png"
+                src="/image/Group5.png"
                 className="absolute bottom-0 left-0 md:bottom-16 md:block"
                 alt="Decorative"
               />
@@ -92,7 +92,7 @@ const Review = () => {
                     </span>
                   </div>
                   <img
-                    src="../../public/image/Image6.png"
+                    src="/image/Image6.png"
                     alt="Reviewer"
                     className="w-10 h-10 rounded-full md:w-12 md:h-12"
                   />
@@ -105,7 +105,7 @@ const Review = () => {
             </div>
             <div className="w-full mt-6 md:w-3/5 md:mt-0">
               <img
-                src="../../public/image/Video.png"
+                src="/image/Video.png"
                 alt="Food"
                 className="object-cover w-full h-full shadow-lg"
               />
