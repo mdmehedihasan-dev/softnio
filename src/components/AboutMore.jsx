@@ -7,7 +7,7 @@ const AboutMore = () => {
         <div className="w-[90%] lg:w-[80%] mx-auto">
           <div className="flex flex-col lg:flex-row mb-16 lg:mb-[74px] items-center justify-between gap-y-8 lg:gap-x-20">
             <div className="w-full lg:w-1/2">
-              <img className="w-full h-auto" src="../../public/image/Image.png" alt="About Image" />
+              <img className="w-full h-auto" src="/image/Image.png" alt="About Image" />
             </div>
             <div className="w-full lg:w-1/2">
               <ul className="flex items-center mb-4 gap-x-4">
@@ -37,7 +37,7 @@ const AboutMore = () => {
                 <div className="flex items-center gap-4 mt-6 lg:mt-8 sm:gap-x-8">
                   <Button title={"About More"} />
                   <div className="flex items-center gap-2">
-                    <img className="w-6 h-6 sm:w-8 sm:h-8" src="../../public/image/call-alt.png" alt="Call Icon" />
+                    <img className="w-6 h-6 sm:w-8 sm:h-8" src="/image/call-alt.png" alt="Call Icon" />
                     <span className="font-bold text-base sm:text-[18px]">01703946056</span>
                   </div>
                 </div>
