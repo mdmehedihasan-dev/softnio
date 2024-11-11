@@ -17,13 +17,17 @@ const FoodItem = () => {
   };
 
   const settings = {
-    nextArrow: <></>,
-    prevArrow: <></>,
+    nextArrow: <></>,  
+    prevArrow: <></>,  
     dots: false,
-    infinite: true,
+    infinite: true,  
     speed: 500,
+    autoplay: true,  
+    autoplaySpeed: 1000,  
     slidesToShow: 4,
     slidesToScroll: 1,
+    centerMode: true,  
+    centerPadding: "0", 
     responsive: [
       {
         breakpoint: 1024,
@@ -56,34 +60,34 @@ const FoodItem = () => {
             </h1>
           </div>
           
-         <div className="hidden sm:block">
-         <div className="flex gap-x-4 sm:gap-x-8">
-            <div
-              onClick={prevSlide}
-              className="flex items-center justify-center w-12 h-12 bg-white rounded-full shadow-md cursor-pointer sm:w-16 sm:h-16"
-            >
-              <MdKeyboardArrowLeft className="hover:text-[#BD1F17] text-lg sm:text-xl font-bold" />
-            </div>
-            <div
-              onClick={nextSlide}
-              className="flex items-center justify-center w-12 h-12 bg-white rounded-full shadow-md cursor-pointer sm:w-16 sm:h-16"
-            >
-              <MdKeyboardArrowRight className="text-[#BD1F17] text-lg sm:text-xl font-bold" />
+          <div className="hidden sm:block">
+            <div className="flex gap-x-4 sm:gap-x-8">
+              <div
+                onClick={prevSlide}
+                className="flex items-center justify-center w-12 h-12 bg-white rounded-full shadow-md cursor-pointer sm:w-16 sm:h-16"
+              >
+                <MdKeyboardArrowLeft className="hover:text-[#BD1F17] text-lg sm:text-xl font-bold" />
+              </div>
+              <div
+                onClick={nextSlide}
+                className="flex items-center justify-center w-12 h-12 bg-white rounded-full shadow-md cursor-pointer sm:w-16 sm:h-16"
+              >
+                <MdKeyboardArrowRight className="text-[#BD1F17] text-lg sm:text-xl font-bold" />
+              </div>
             </div>
           </div>
-         </div>
         </div>
       
 
         {/* Slider Section */}
         <Slider ref={sliderRef} {...settings} className="mt-10 sm:mt-14">
-          {[
+          {[ 
             { imgSrc: "burger.png", title: "Vegetables Burger", desc: "Barbecue Italian cuisine pizza" },
             { imgSrc: "pizza.png", title: "Special Pizza", desc: "Barbecue Italian cuisine pizza" },
             { imgSrc: "French.png", title: "Special French Fries", desc: "Barbecue Italian cuisine" },
             { imgSrc: "Chicken.png", title: "Cuisine Chicken", desc: "Japanese Cuisine Chicken" },
           ].map((item, index) => (
-            <div key={index} className="text-center bg-white w-full sm:w-[280px] h-[300px] mx-2">
+            <div key={index} className="text-center  bg-white w-full sm:w-[280px] h-[300px] mx-2 gap-x-10">
               <div className="py-8">
                 <img src={`/image/${item.imgSrc}`} className="mx-auto" alt={item.title} />
                 <div className="h-1 w-14 my-6 mx-auto bg-[#BD1F17]"></div>
@@ -95,7 +99,7 @@ const FoodItem = () => {
         </Slider>
          
         <div className="block mt-10 sm:hidden">
-        <div className="flex justify-center gap-x-4 sm:gap-x-8">
+          <div className="flex justify-center gap-x-4 sm:gap-x-8">
             <div
               onClick={prevSlide}
               className="flex items-center justify-center w-12 h-12 bg-white rounded-full shadow-md cursor-pointer sm:w-16 sm:h-16"

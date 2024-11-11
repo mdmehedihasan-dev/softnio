@@ -5,27 +5,28 @@ const Hero = () => {
     <div
       className="max-w-[1920px]  bg-[#c52b1f]"
       style={{
-        backgroundImage: 'url(/image/mainbg.png)', // Use relative path
+        backgroundImage: "url(/image/mainbg.png)", // Use relative path
         backgroundSize: "cover",
         backgroundPosition: "center",
-        backgroundRepeat: 'no-repeat',
-      
+        backgroundRepeat: "no-repeat",
+
         width: "100%",
-        paddingTop:"100px",
-        paddingBottom:'100px'
+        paddingTop: "100px",
+        paddingBottom: "100px",
       }}
     >
       <div className="w-[90%] md:w-[80%] py-16 flex flex-col md:flex-row relative items-center mx-auto">
         {/* Left content */}
         <div className="w-full mb-8 md:w-1/2 md:mb-0">
           <div className="w-[90%] block md:absolute top-28 sm:w-[320px] md:w-[700px] lg:w-[830px] py-5 h-auto md:h-[272px] z-20 bg-custom-gradient mx-auto md:mx-0">
-            <span className="opacity-100 font-bold z-20 text-white uppercase text-2xl sm:text-[30px] md:text-[50px] lg:text-[70px] leading-tight md:leading-[70px] lg:leading-[100px]">
+            <span className=" font-bold  text-white uppercase text-2xl sm:text-[30px] md:text-[50px] lg:text-[70px] leading-tight md:leading-[70px] lg:leading-[100px]">
               Taste the authentic Saudi cuisine
             </span>
           </div>
           <div className="w-[90%] sm:w-[320px] md:w-[460px] lg:w-[560px] mt-6 md:mt-48 mx-auto md:mx-0">
             <p className="mb-4 text-xs leading-5 text-white sm:text-lg md:text-xl lg:text-2xl md:leading-7 lg:leading-8 md:mb-6 lg:mb-9">
-              Among the best Saudi chefs in the world, serving you something beyond flavor.
+              Among the best Saudi chefs in the world, serving you something
+              beyond flavor.
             </p>
             <Button title={"Explore Menu"} />
           </div>
