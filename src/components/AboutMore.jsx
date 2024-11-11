@@ -53,7 +53,7 @@ const AboutMore = () => {
             ].map((item, index) => (
               <div key={index} className="flex items-center gap-4 text-center sm:text-left">
                 <div className="flex items-center justify-center w-[70px] sm:w-[90px] h-[70px] sm:h-[90px] rounded-full shadow-md">
-                  <img src={`../../public/image/${item.imgSrc}`} alt={`${item.title} Icon`} />
+                  <img src={`/image/${item.imgSrc}`} alt={`${item.title} Icon`} />
                 </div>
                 <div>
                   <p className="text-[#0A1425] font-bold uppercase text-lg sm:text-3xl">{item.title}</p>
@@ -65,7 +65,7 @@ const AboutMore = () => {
         </div>
         <img
         className="absolute right-0 hidden w-24 lg:block bottom-36 lg:w-auto"
-        src="../../public/image/aboutview.png"
+        src="/image/aboutview.png"
         alt="Decorative"
       />
       </div>
