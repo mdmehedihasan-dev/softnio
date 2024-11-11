@@ -22,7 +22,7 @@ const Review = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: false, // Disabling default arrows since we're using custom ones
-    dots: true, // You can choose to show dots or not
+    dots: false, // You can choose to show dots or not
   };
 
   return (
@@ -45,7 +45,8 @@ const Review = () => {
               What Some of Our Customers Say
             </h1>
           </div>
-          <div className="flex mt-6 gap-x-4 md:mt-0">
+         <div className="hidden md:block">
+         <div className="flex mt-6 gap-x-4 md:mt-0">
             <div onClick={prevSlide} className="flex items-center justify-center w-10 h-10 bg-white rounded-full shadow-md cursor-pointer sm:w-12 sm:h-12">
               <MdKeyboardArrowLeft        className="text-lg sm:text-xl hover:text-[#BD1F17]" />
             </div>
@@ -53,6 +54,7 @@ const Review = () => {
               <MdKeyboardArrowRight       className="text-lg sm:text-xl text-[#BD1F17]" />
             </div>
           </div>
+         </div>
         </div>
 
         {/* Slick Slider for Reviews */}
@@ -149,6 +151,17 @@ const Review = () => {
             </div>
           </div>
         </Slider>
+
+        <div className="block md:hidden">
+         <div className="flex justify-center mt-6 gap-x-4 md:mt-0">
+            <div onClick={prevSlide} className="flex items-center justify-center w-10 h-10 bg-white rounded-full shadow-md cursor-pointer sm:w-12 sm:h-12">
+              <MdKeyboardArrowLeft        className="text-lg sm:text-xl hover:text-[#BD1F17]" />
+            </div>
+            <div onClick={nextSlide}  className="flex items-center justify-center w-10 h-10 bg-white rounded-full shadow-md cursor-pointer sm:w-12 sm:h-12">
+              <MdKeyboardArrowRight       className="text-lg sm:text-xl text-[#BD1F17]" />
+            </div>
+          </div>
+         </div>
       </div>
     </div>
   );
