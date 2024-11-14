@@ -111,7 +111,7 @@ const BookTable = () => {
                 )}
               </div>
 
-              <div className="w-full flex justify-center items-center relative sm:w-[320px]">
+              <div className="w-full  relative sm:w-[320px]">
                 <input
                   type="text"
                   value={date}
