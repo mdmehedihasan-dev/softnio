@@ -2,7 +2,7 @@
 
 [Visit Site](https://softnio-iota.vercel.app/)
 
-This React application serves as the front end for a restaurant website, showcasing features and functionalities for Softnio's potential clients. It utilizes modern web technologies and best practices to create a responsive, user-friendly, and visually appealing website.
+This React application serves as the front end for a restaurant website, created as part of an Assignment task for a front-end developer interview at softnio.com. It utilizes modern web technologies and best practices to create a responsive, user-friendly, and visually appealing website.
 
 ## Features
 
