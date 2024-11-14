@@ -96,7 +96,7 @@ const BookTable = () => {
                 <DatePicker
                   selected={date}
                   onChange={(selectedDate) => setDate(selectedDate)}
-                  className="w-[325px] py-3 pl-4 pr-10 text-white bg-transparent border border-white sm:w-80 placeholder:text-white focus:outline-none"
+                  className="w-[330px] py-3 pl-4 pr-10 text-white bg-transparent border border-white sm:w-80 placeholder:text-white focus:outline-none"
                   placeholderText="Reservation Date"
                 />
                 <div className="absolute text-white translate-y-1/2 top-2 right-3">
