@@ -92,15 +92,18 @@ const BookTable = () => {
                 {errors.email && <p className="text-sm text-red-500">{errors.email}</p>}
               </div>
 
-              <div className="w-full relative sm:w-[320px]">
+              <div className="w-full flex justify-center items-center relative sm:w-[320px]">
                 <DatePicker
                   selected={date}
                   onChange={(selectedDate) => setDate(selectedDate)}
                   className="px-4 py-3 text-white bg-transparent border border-white w-80 placeholder:text-white focus:outline-none"
                   placeholderText="Reservation Date"  // Custom placeholder text
-                  
+                 
                 />
-                <FaRegCalendarAlt className="absolute text-white translate-y-1/2 top-2 right-3 " />
+                <div className="absolute text-white translate-y-1/2 top-2 right-3 " >
+                <FaRegCalendarAlt />
+                </div>
+          
 
                 {errors.date && <p className="text-sm text-red-500">{errors.date}</p>}
               </div>

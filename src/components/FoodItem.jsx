@@ -87,8 +87,8 @@ const FoodItem = () => {
             { imgSrc: "French.png", title: "Special French Fries", desc: "Barbecue Italian cuisine" },
             { imgSrc: "Chicken.png", title: "Cuisine Chicken", desc: "Japanese Cuisine Chicken" },
           ].map((item, index) => (
-            <div key={index} className="text-center  bg-white w-full sm:w-[280px] h-[300px] mx-2">
-              <div className="py-8">
+            <div key={index} className="text-center   w-full sm:w-[250px] h-[300px] mx-2">
+              <div className="py-8 bg-white ">
                 <img src={`/image/${item.imgSrc}`} className="mx-auto" alt={item.title} />
                 <div className="h-1 w-14 my-6 mx-auto bg-[#BD1F17]"></div>
                 <p className="font-bold uppercase text-lg sm:text-2xl text-[#0A1425]">{item.title}</p>
