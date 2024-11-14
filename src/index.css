@@ -27,3 +27,8 @@
     z-index: 2;
     color: white; /* Example text color */
   }
+
+  input[type=number]::-webkit-inner-spin-button,  
+  input[type=number]::-webkit-outer-spin-button {  
+      opacity: 1; /* Set to 1 to make arrows visible */  
+  }  

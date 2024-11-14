@@ -1,27 +1,26 @@
 import { useState } from "react";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 import bgImg from "../../public/image/booktable.jpeg";
 import Button from "./Button";
-
+import { FaRegCalendarAlt } from "react-icons/fa";
 
 const BookTable = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-  const [date, setDate] = useState("");
+  const [date, setDate] = useState(null);  // Set initial date to null
   const [people, setPeople] = useState("");
   const [message, setMessage] = useState("");
-
   const [errors, setErrors] = useState({});
 
   const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
   const validateForm = () => {
     const newErrors = {};
-
     if (!name.trim()) newErrors.name = "Name is required.";
     if (!emailPattern.test(email)) newErrors.email = "Invalid email format.";
     if (!date) newErrors.date = "Please select a reservation date.";
     if (people <= 0) newErrors.people = "Total people should be at least 1.";
-
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
@@ -32,12 +31,11 @@ const BookTable = () => {
       alert("Form submitted successfully!");
       setName("");
       setEmail("");
-      setDate("");
+      setDate(null);  // Reset date to null
       setPeople("");
       setMessage("");
       setErrors({});
     } else {
-      
       alert("All fields are required");
     }
   };
@@ -94,14 +92,16 @@ const BookTable = () => {
                 {errors.email && <p className="text-sm text-red-500">{errors.email}</p>}
               </div>
 
-              <div className="w-full sm:w-[320px]">
-                <input
-                  type="date"
-                  value={date}
-                  onChange={(e) => setDate(e.target.value)}
-                  className="w-full px-4 py-3 text-white bg-transparent border border-white placeholder:text-white focus:outline-none"
-                  placeholder="Reservation Date"
+              <div className="w-full relative sm:w-[320px]">
+                <DatePicker
+                  selected={date}
+                  onChange={(selectedDate) => setDate(selectedDate)}
+                  className="px-4 py-3 text-white bg-transparent border border-white w-80 placeholder:text-white focus:outline-none"
+                  placeholderText="Reservation Date"  // Custom placeholder text
+                  
                 />
+                <FaRegCalendarAlt className="absolute text-white translate-y-1/2 top-2 right-3 " />
+
                 {errors.date && <p className="text-sm text-red-500">{errors.date}</p>}
               </div>
 
@@ -126,8 +126,6 @@ const BookTable = () => {
 
             <Button type="submit" title={"Book A Table"} />
           </form>
-
-
         </div>
       </div>
     </div>

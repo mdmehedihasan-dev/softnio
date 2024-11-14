@@ -9,7 +9,13 @@ const NavBar = () => {
   };
 
   return (
-    <header className="bg-[#cb3f32] sticky top-0  z-20 max-w-[1920px] ">
+    <header  style={{
+      backgroundImage: "url(/image/mainbg.png)", // Use relative path
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+      backgroundRepeat: "no-repeat",
+     
+    }} className="bg-[#c52b1f] sticky top-0  z-20 max-w-[1920px] ">
       {/*   */}
       <div className="flex w-[90%] md:w-[80%] py-6 mx-auto justify-between items-center">
         {/* Logo */}
