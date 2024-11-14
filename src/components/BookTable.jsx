@@ -1,5 +1,5 @@
 import { useState } from "react";
-import DatePicker from "react-datepicker";
+// import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import bgImg from "../../public/image/booktable.jpeg";
 import Button from "./Button";
@@ -8,7 +8,7 @@ import { FaRegCalendarAlt } from "react-icons/fa";
 const BookTable = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-  const [date, setDate] = useState(null); // Set initial date to null
+  // const [date, setDate] = useState(null);
   const [people, setPeople] = useState("");
   const [message, setMessage] = useState("");
   const [errors, setErrors] = useState({});
@@ -40,6 +40,18 @@ const BookTable = () => {
     }
   };
 
+  const [date, setDate] = useState("");
+
+  const handleFocus = (e) => {
+    e.target.type = "date";
+  };
+
+  const handleBlur = (e) => {
+    if (e.target.value === "") {
+      e.target.type = "text";
+    }
+  };
+
   return (
     <div
       className="max-w-[1920px] py-16"
@@ -56,13 +68,16 @@ const BookTable = () => {
           <div className="w-full sm:w-[475px]">
             <div className="flex items-center gap-x-4">
               <div className="w-[10px] h-[10px] mt-[3px] bg-[#BD1F17]"></div>
-              <span className="text-[#BD1F17] text-lg sm:text-xl font-bold">Book Now</span>
+              <span className="text-[#BD1F17] text-lg sm:text-xl font-bold">
+                Book Now
+              </span>
             </div>
             <h1 className="my-2 text-3xl font-bold text-white sm:my-4 sm:text-4xl">
               Book Your Table
             </h1>
             <span className="text-white text-sm sm:text-[16px]">
-              Enim tempor eget pharetra facilisis sed maecenas adipiscing. Eu leo molestie vel, ornare non id blandit netus.
+              Enim tempor eget pharetra facilisis sed maecenas adipiscing. Eu
+              leo molestie vel, ornare non id blandit netus.
             </span>
           </div>
         </div>
@@ -78,7 +93,9 @@ const BookTable = () => {
                   className="w-full px-4 py-3 text-white bg-transparent border border-white placeholder:text-white focus:outline-none"
                   placeholder="Your Name*"
                 />
-                {errors.name && <p className="text-sm text-red-500">{errors.name}</p>}
+                {errors.name && (
+                  <p className="text-sm text-red-500">{errors.name}</p>
+                )}
               </div>
 
               <div className="w-full sm:w-[320px]">
@@ -89,20 +106,28 @@ const BookTable = () => {
                   className="w-full px-4 py-3 text-white bg-transparent border border-white placeholder:text-white focus:outline-none"
                   placeholder="Enter your email"
                 />
-                {errors.email && <p className="text-sm text-red-500">{errors.email}</p>}
+                {errors.email && (
+                  <p className="text-sm text-red-500">{errors.email}</p>
+                )}
               </div>
 
               <div className="w-full flex justify-center items-center relative sm:w-[320px]">
-                <DatePicker
-                  selected={date}
-                  onChange={(selectedDate) => setDate(selectedDate)}
-                  className="w-[330px] py-3 pl-4 pr-10 text-white bg-transparent border border-white sm:w-80 placeholder:text-white focus:outline-none"
-                  placeholderText="Reservation Date"
+                <input
+                  type="text"
+                  value={date}
+                  onChange={(e) => setDate(e.target.value)}
+                  onFocus={handleFocus}
+                  onBlur={handleBlur}
+                  placeholder="Reservation Date"
+                  className="w-full px-4 py-3 text-white bg-transparent border border-white placeholder:text-white focus:outline-none"
                 />
+
                 <div className="absolute text-white translate-y-1/2 top-2 right-3">
                   <FaRegCalendarAlt />
                 </div>
-                {errors.date && <p className="text-sm text-red-500">{errors.date}</p>}
+                {errors.date && (
+                  <p className="text-sm text-red-500">{errors.date}</p>
+                )}
               </div>
 
               <div className="w-full sm:w-[320px]">
@@ -113,7 +138,9 @@ const BookTable = () => {
                   className="w-full px-4 py-3 text-white bg-transparent border border-white placeholder:text-white focus:outline-none"
                   placeholder="Total People"
                 />
-                {errors.people && <p className="text-sm text-red-500">{errors.people}</p>}
+                {errors.people && (
+                  <p className="text-sm text-red-500">{errors.people}</p>
+                )}
               </div>
             </div>
 
@@ -128,7 +155,6 @@ const BookTable = () => {
           </form>
         </div>
       </div>
-   
     </div>
   );
 };
