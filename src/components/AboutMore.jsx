@@ -64,7 +64,7 @@ const AboutMore = () => {
           </div>
 
           {/* Icon Section */}
-          <div className="flex flex-col items-center gap-8 sm:flex-row sm:gap-x-16">
+          <div className="flex flex-col items-center gap-8 md:flex-row sm:gap-x-16">
             {[{
               imgSrc: "package.png",
               title: "fast delivery",

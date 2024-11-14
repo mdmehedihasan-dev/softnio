@@ -96,7 +96,7 @@ const BookTable = () => {
                 <DatePicker
                   selected={date}
                   onChange={(selectedDate) => setDate(selectedDate)}
-                  className="px-4 py-3 text-white bg-transparent border border-white w-[320px] md:w-80 placeholder:text-white focus:outline-none"
+                  className="w-[325px] py-3 pl-4 pr-10 text-white bg-transparent border border-white sm:w-80 placeholder:text-white focus:outline-none"
                   placeholderText="Reservation Date"
                 />
                 <div className="absolute text-white translate-y-1/2 top-2 right-3">
@@ -121,13 +121,14 @@ const BookTable = () => {
               value={message}
               onChange={(e) => setMessage(e.target.value)}
               placeholder="Message"
-              className="w-full sm:w-[665px] h-32 my-6 px-4 py-3 text-white bg-transparent border border-white placeholder:text-white focus:outline-none"
+              className="w-full md:w-[665px] h-32 my-6 px-4 py-3 text-white bg-transparent border border-white placeholder:text-white focus:outline-none"
             ></textarea>
 
             <Button type="submit" title={"Book A Table"} />
           </form>
         </div>
       </div>
+   
     </div>
   );
 };

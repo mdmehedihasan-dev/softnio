@@ -27,6 +27,7 @@ const Review = () => {
 
   return (
     <div className="relative max-w-[1920px] py-20 bg-gray-100">
+         <img className="absolute right-0 hidden lg:block bottom-10" src="/image/12.png" alt="" />
       <img
         src="/image/221.png"
         className="absolute hidden md:block w-[80px] h-[160px] sm:w-[100px] sm:h-[203px] left-0 top-28"
