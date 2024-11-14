@@ -8,7 +8,7 @@ import { FaRegCalendarAlt } from "react-icons/fa";
 const BookTable = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-  const [date, setDate] = useState(null);  // Set initial date to null
+  const [date, setDate] = useState(null); // Set initial date to null
   const [people, setPeople] = useState("");
   const [message, setMessage] = useState("");
   const [errors, setErrors] = useState({});
@@ -31,7 +31,7 @@ const BookTable = () => {
       alert("Form submitted successfully!");
       setName("");
       setEmail("");
-      setDate(null);  // Reset date to null
+      setDate(null); // Reset date to null
       setPeople("");
       setMessage("");
       setErrors({});
@@ -96,15 +96,12 @@ const BookTable = () => {
                 <DatePicker
                   selected={date}
                   onChange={(selectedDate) => setDate(selectedDate)}
-                  className="px-4 py-3 text-white bg-transparent border border-white w-80 placeholder:text-white focus:outline-none"
-                  placeholderText="Reservation Date"  // Custom placeholder text
-                 
+                  className="px-4 py-3 text-white bg-transparent border border-white w-[320px] md:w-80 placeholder:text-white focus:outline-none"
+                  placeholderText="Reservation Date"
                 />
-                <div className="absolute text-white translate-y-1/2 top-2 right-3 " >
-                <FaRegCalendarAlt />
+                <div className="absolute text-white translate-y-1/2 top-2 right-3">
+                  <FaRegCalendarAlt />
                 </div>
-          
-
                 {errors.date && <p className="text-sm text-red-500">{errors.date}</p>}
               </div>
 
