@@ -1,20 +1,29 @@
+import { useEffect, useState } from "react";
 import Button from "./Button";
 
 const Hero = () => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth <= 768); // Adjust breakpoint as needed
+    handleResize(); // Set initial value
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
   return (
     <div
       className="max-w-[1920px]  bg-[#c52b1f]"
       style={{
-        backgroundImage: "url(/image/mainbg.png)", // Use relative path
+        backgroundImage: "url(/image/mainbg.png)",
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
         width: "100%",
-        paddingTop: "100px",
-        paddingBottom: "100px",
+        paddingTop: isMobile ? "30px" : "100px",
+        paddingBottom: isMobile ? "30px" : "100px",
       }}
     >
-      <div className="w-[90%] md:w-[80%] py-16 flex flex-col md:flex-row relative items-center mx-auto">
+      <div className="w-[90%] md:w-[80%] py-2 md:py-16 flex flex-col md:flex-row relative items-center mx-auto">
         {/* Left content */}
         <div className="w-full mb-8 md:w-1/2 md:mb-0">
           <div className="w-[90%] block md:absolute top-28 sm:w-[320px] md:w-[700px] lg:w-[830px] py-5 h-auto md:h-[272px] z-10 bg-custom-gradient mx-auto md:mx-0">
